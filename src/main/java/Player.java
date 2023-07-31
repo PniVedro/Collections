@@ -38,7 +38,7 @@ public class Player implements Comparable<Player>{
 
     public int compareTo(Player o) {
         if (this.strength < o.strength) {
-            return -1;
+            return 2;
         } else if (this.strength > o.strength) {
             return 1;
         } else {

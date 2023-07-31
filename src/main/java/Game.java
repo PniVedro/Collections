@@ -21,6 +21,12 @@ public class Game {
     }
 
     public int round(String playerName1, String playerName2) {
+        if (findByName(playerName1) == -1) {
+            throw new NotRegisteredException("Player with name" + playerName1 + " not register");
+        }
+        if (findByName(playerName2) == -1) {
+            throw new NotRegisteredException("Player with name" + playerName2 + " not register");
+        }
         int indexPlayerOne = findByName(playerName1);
         int indexPlayerTwo = findByName(playerName2);
         Player a = players.get(indexPlayerOne);
